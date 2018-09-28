@@ -9,9 +9,9 @@ before_install:
   - sudo ln -s /usr/local/share/arduino/arduino /usr/local/bin/arduino
 install:
   - ln -s $PWD /usr/local/share/arduino/libraries/ArduinoSort
+  - ln -s $PWD /usr/local/share/arduino/libraries/Adafruit_MLX90614_Library
 script:
   - arduino --verify --board arduino:avr:uno $PWD/testForTravis/testForTravis.ino
-  - arduino --install-library "Adafruit MLX90614"
 notifications:
   email:
     on_success: change
