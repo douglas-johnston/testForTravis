@@ -6,8 +6,8 @@
 #include "parson.h"
 #include <Wire.h>
 */
-#include <Adafruit_MLX90614.h>
-#include <ArduinoSort.h>
+//#include <Adafruit_MLX90614.h>
+//#include <ArduinoSort.h>
 
 
 void setup() {
