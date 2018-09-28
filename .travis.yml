@@ -11,6 +11,7 @@ install:
 
 script:
   - arduino --verify --board arduino:avr:uno $PWD/testForTravis/testForTravis.ino
+  - arduino --install-library "Adafruit MLX90614"
 notifications:
   email:
     on_success: change
