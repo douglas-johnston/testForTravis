@@ -10,7 +10,7 @@ before_install:
 install: true
 script:
   - arduino --verify --board AZ3166:stm32f4:MXCHIP_AZ3166 $PWD/testForTravis/testForTravis.ino
-  notifications:
+notifications:
   email:
     on_success: change
     on_failure: change
