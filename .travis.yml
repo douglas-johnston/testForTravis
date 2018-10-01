@@ -1,13 +1,11 @@
 language: cpp
-os: osx
 before_install:
   - sudo mv Arduino15 /Applications/Library
   - sudo mv Arduino.app /Applications
-  - ls
 
 install: true
 script:
-  - /Applications/Arduino.app/Contents/MacOS/Arduino --verify --board AZ3166:stm32f4:MXCHIP_AZ3166 $PWD/testForTravis/testForTravis.ino
+  - arduino --verify --board AZ3166:stm32f4:MXCHIP_AZ3166 $PWD/testForTravis/testForTravis.ino
   notifications:
   email:
     on_success: change
