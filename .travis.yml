@@ -2,11 +2,11 @@ language: cpp
 os: osx
 before_install:
   - export DISPLAY=:1.0
-install: true
-script:
-  - ls
+install:
   - sudo mv Arduino15 /Applications/Library
   - sudo mv Arduino.app /Applications
+  - sudo mv Arduino /Users/travis/Documents
+script:
   - /Applications/Arduino.app/Contents/MacOS/Arduino --verify --board AZ3166:stm32f4:MXCHIP_AZ3166 $PWD/testForTravis/testForTravis.ino
 notifications:
   email:
