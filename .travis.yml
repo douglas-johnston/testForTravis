@@ -4,6 +4,9 @@ before_install:
   - export DISPLAY=:1.0
 install: true
 script:
+  - ls
+  - sudo mv Arduino15 /Applications/Library
+  - sudo mv Arduino.app /Applications
   - /Applications/Arduino.app/Contents/MacOS/Arduino --verify --board AZ3166:stm32f4:MXCHIP_AZ3166 $PWD/testForTravis/testForTravis.ino
 notifications:
   email:
