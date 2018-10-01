@@ -13,7 +13,7 @@ before_install:
   - sudo apt-get install apt-transport-https
   - sudo apt-get update
   - sudo apt-get install code
-  - code --install-extension vscode-arduino.arduino
+  - code --install-extension vsciot-vscode.vscode-arduino
 install: true
 script:
   - arduino --verify --board arduino:avr:uno $PWD/testForTravis/testForTravis.ino
